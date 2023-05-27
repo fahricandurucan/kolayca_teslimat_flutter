@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kolayca_teslimat_flutter/pages/home_page.dart';
+import 'package:kolayca_teslimat_flutter/pages/login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.brown,
       ),
-      home: HomePage(),
+      home: LoginPage(),
     );
   }
 }
