@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kolayca_teslimat_flutter/pages/home_page.dart';
 import 'package:kolayca_teslimat_flutter/pages/login_page.dart';
+import 'package:kolayca_teslimat_flutter/pages/splash_page.dart';
 import 'package:kolayca_teslimat_flutter/pages/waiting_packages_page.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.brown,
       ),
-      home: WaitingPackagesPage(),
+      home: SplashPage(),
     );
   }
 }
