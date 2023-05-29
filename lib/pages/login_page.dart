@@ -56,11 +56,12 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
-                padding: EdgeInsets.only(bottom: 20),
-              child:Text("WELCOME..!",style:
-              TextStyle(color: Colors.black,fontSize: 28,fontWeight: FontWeight.bold),),
-            ),
+            // Padding(
+            //     padding: EdgeInsets.only(bottom: 20),
+            //   child:Text("WELCOME..!",style:
+            //   TextStyle(color: Colors.black,fontSize: 28,fontWeight: FontWeight.bold),),
+            // ),
+            Padding(padding: EdgeInsets.all(12),child: Image.asset("assets/z.png"),),
             buildPhoneNumber(),
             buildLoginButton(),
           ],

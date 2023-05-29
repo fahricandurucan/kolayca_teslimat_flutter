@@ -32,11 +32,11 @@ class _HomePageState extends State<HomePage> {
                   CircleAvatar(
                     radius: 40,
                     backgroundColor: Colors.blueGrey,
-                    backgroundImage: NetworkImage("https://cdn-icons-png.flaticon.com/128/383/383980.png"),
+                    backgroundImage: AssetImage("assets/ic_launcher.png"),
 
                   ),
                   SizedBox(height: 15,),
-                  Text("Kolayca Teslimat",style: TextStyle(fontSize: 21),),
+                  Text("Kolayca Teslimat",style: TextStyle(fontSize: 21,color: Colors.white),),
                 ],
               ),
             decoration: BoxDecoration(
