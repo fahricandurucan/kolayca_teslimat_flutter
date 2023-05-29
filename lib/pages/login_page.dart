@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kolayca_teslimat_flutter/pages/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -38,8 +39,7 @@ class _LoginPageState extends State<LoginPage> {
     });
 
     if(phoneNumberController.text =="123456"){
-      ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content:Text("Bilgileriniz doğrudur.")));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
     }
     else{
       ScaffoldMessenger.of(context).showSnackBar(
@@ -56,6 +56,11 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Padding(
+                padding: EdgeInsets.only(bottom: 20),
+              child:Text("WELCOME..!",style:
+              TextStyle(color: Colors.black,fontSize: 28,fontWeight: FontWeight.bold),),
+            ),
             buildPhoneNumber(),
             buildLoginButton(),
           ],
