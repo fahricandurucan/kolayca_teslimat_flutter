@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kolayca_teslimat_flutter/models/package_model.dart';
+import 'package:kolayca_teslimat_flutter/pages/package_page.dart';
 
 class WaitingPackagesPage extends StatefulWidget {
   const WaitingPackagesPage({Key? key}) : super(key: key);
@@ -67,23 +68,28 @@ class _WaitingPackagesPageState extends State<WaitingPackagesPage> {
   }
 
   Widget buildPack(Package package) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.blueGrey,
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Padding(
-        padding: EdgeInsets.all(4),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text("Paket ID : ${package.id}",style: TextStyle(fontSize: 16),),
-            SizedBox(height: 10,),
-            Text("Tip : ${package.typeName}",style: TextStyle(fontSize: 16),),
-            SizedBox(height: 10,),
-            Text("Fiyat : ${package.price} TL",style: TextStyle(fontSize: 16),),
-          ],
+    return GestureDetector(
+      onTap: (){
+        Navigator.push(context, MaterialPageRoute(builder: (context) => PackagePage(package: package,)));
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.blueGrey,
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Padding(
+          padding: EdgeInsets.all(4),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text("Paket ID : ${package.id}",style: TextStyle(fontSize: 16),),
+              SizedBox(height: 10,),
+              Text("Tip : ${package.typeName}",style: TextStyle(fontSize: 16),),
+              SizedBox(height: 10,),
+              Text("Fiyat : ${package.price} TL",style: TextStyle(fontSize: 16),),
+            ],
+          ),
         ),
       ),
     );
