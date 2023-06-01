@@ -71,7 +71,14 @@ class _HomePageState extends State<HomePage> {
               leading: Icon(Icons.close),
               onTap: (){
                 Navigator.pop(context);
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginPage()));
+
+                ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text("Hesaptan çıkış yapılıyor")));
+
+                Future.delayed(Duration(seconds: 2), (){
+                  return Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginPage()));
+
+                });
               }
           ),
         ],
